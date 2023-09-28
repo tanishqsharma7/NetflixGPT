@@ -3,8 +3,11 @@
 - Create React App
 - Configured Tailwinf CSS
 - Header
+- Routing
 - login form
-  -SignUp Form
+- SignUp Form
+- Form Validation
+- Useref Hook
 
 #Features
 
