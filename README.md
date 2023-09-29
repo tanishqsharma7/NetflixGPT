@@ -8,6 +8,9 @@
 - SignUp Form
 - Form Validation
 - Useref Hook
+- Firebase Setup
+- Deploying app to Production (pending)
+- Create Signup User a/c in firebase
 
 #Features
 
