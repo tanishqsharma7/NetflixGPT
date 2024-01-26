@@ -1,7 +1,7 @@
 # Netflix GPT
 
 - Create React App
-- Configured Tailwinf CSS
+- Configured Tailwind CSS
 - Header
 - Routing
 - login form
@@ -13,8 +13,11 @@
 - Create Signup User a/c in firebase
 - Implement SignIn User Api
 - Created Redux Store with UserSlice
+- Implemented Signout
+- Update Profile API calls
+- Fetch Movies from TMDB Movies API
 
-#Features
+# Features
 
 - Login/ Signup
   - Singin/Singup form
@@ -32,4 +35,4 @@
   - Search Bar
   - Movie Suggestions
 
-#Formik for form validation
+# Formik for form validation
