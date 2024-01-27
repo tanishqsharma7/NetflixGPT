@@ -22,7 +22,13 @@
 - Add hardcoded values to constants file.
 - Register for TMDB movies and create app and get access token
 - Get data from TMDB movies now playing movies list API.
--
+- Custom hook for nowPlayingMovies
+- Create movieSlice
+- Updated Store with movies data
+- Fetch data for trailer video
+- Update store with trailer vidoe data
+- Embedd YT vdio and make it autoplay and mute
+- Tailwind CSS to make it look nice
 
 # Features
 
@@ -42,4 +48,4 @@
   - Search Bar
   - Movie Suggestions
 
-# Formik for form validation
+# Formik for large form validation
