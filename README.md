@@ -16,6 +16,11 @@
 - Implemented Signout
 - Update Profile API calls
 - Fetch Movies from TMDB Movies API
+- Bug fix of signup user displayName and profilePicture
+- Bugfix : if user !loggedin, redirect to /browse to login page and vica versa.
+- Unsubscribe to the onAuthStateChange callback.
+- Add hardcoded values to constants file.
+-
 
 # Features
 
