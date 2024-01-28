@@ -29,6 +29,14 @@
 - Update store with trailer vidoe data
 - Embedd YT vdio and make it autoplay and mute
 - Tailwind CSS to make it look nice
+- Secondary COmponent
+- Built Movie list and Card
+- TMDB Image CDN
+- Browse Page enhanced
+- Custom Hooks
+- GPT Search feature
+- (\*)Added multi language feature
+- Intergrate GPT APIs
 
 # Features
 
