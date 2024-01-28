@@ -37,6 +37,12 @@
 - GPT Search feature
 - (\*)Added multi language feature
 - Intergrate GPT APIs
+- Fetched gptMovieSuggestions from TMDB
+- Created GPT slice
+- Reused movielist component
+- Memozation
+- Adding .env file to gitignore
+- Responsive
 
 # Features
 
