@@ -85,7 +85,7 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute w-screen">
+      <div className="absolute w-screen no-scrollbar">
         <img src={BG_URL} alt="logo" />
       </div>
       <form
