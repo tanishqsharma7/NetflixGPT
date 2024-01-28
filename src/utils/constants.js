@@ -4,15 +4,6 @@ export const LOGO =
 export const USER_AVATAR =
   "https://occ-0-2483-3647.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABXz4LMjJFidX8MxhZ6qro8PBTjmHbxlaLAbk45W1DXbKsAIOwyHQPiMAuUnF1G24CLi7InJHK4Ge4jkXul1xIW49Dr5S7fc.png?r=e6e";
 
-export const API_OPTIONS = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZGNkYjZjNDIyYTQyZDc4OTk0NjcwZWFmMDc4ZjZlYSIsInN1YiI6IjY1YjRmMDg1MTI0MjVjMDBjYTQ3ZjNjNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.zFLlvspfZsmbtS6cGDXf9DBBP3pIsjt2e7GzydRlQXQ",
-  },
-};
-
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 
 export const BG_URL =
@@ -25,4 +16,12 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "french", name: "French" },
 ];
 
-export const OPENAI_KEY = "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";
+export const API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
+  },
+};
+
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;

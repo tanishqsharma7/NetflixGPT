@@ -1,11 +1,27 @@
 import React, { useRef } from "react";
 import lang from "../utils/languageConstants";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import openai from "../utils/openai";
+import { API_OPTIONS } from "../utils/constants";
+import { addGPTMovieResult } from "../utils/gptSlice";
 
 const GPTSearchBar = () => {
+  const dispatch = useDispatch();
   const langkey = useSelector((store) => store.config.lang);
   const searchText = useRef(null);
+
+  //Search movie in tmdb
+  const searchMovieTMDB = async (movie) => {
+    const data = await fetch(
+      "https://api.themoviedb.org/3/search/movie?query=" +
+        movie +
+        "&include_adult=false&language=en-US&page=1",
+      API_OPTIONS
+    );
+
+    const json = await data.json();
+    return json.results;
+  };
 
   const handleGPTSearchClick = async () => {
     console.log(searchText.current.value);
@@ -21,7 +37,16 @@ const GPTSearchBar = () => {
       messages: [{ role: "user", content: gptQuery }],
       model: "gpt-3.5-turbo",
     });
-    console.log(GPTResults.choices);
+
+    console.log(GPTResults.choices?.[0].message?.content);
+    const gptMovies = GPTResults.choices?.[0]?.message?.content.split(",");
+    const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
+    const TMDBResults = await Promise.all(promiseArray);
+    console.log(TMDBResults);
+
+    dispatch(
+      addGPTMovieResult({ movieNames: gptMovies, movieResults: TMDBResults })
+    );
   };
   return (
     <div className="pt-[10%] flex justify-center">
